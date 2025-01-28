@@ -53,6 +53,11 @@ code {
 .row {
   display: flex;
 }
+ /* Force black color */
+.cell:disabled {
+  color: black !important; 
+  opacity: 1; 
+}
 
 .cell {
   width: 90px;
