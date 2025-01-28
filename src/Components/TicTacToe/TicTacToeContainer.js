@@ -18,7 +18,13 @@ export const TicTacToeContainer = ({ size }) => {
     if (winnerVal) {
       setWinner(winnerVal);
     } else {
-      setIsXNext(!isXNext);
+      const isSpaceAvailable = newBoard.some(line => line.filter(itm => itm === null).length > 0);
+      if(isSpaceAvailable === true) {
+        setIsXNext(!isXNext);
+      } else {
+        setWinner("No Winner");
+        setTimeout(()=> resetGame(),3000);
+      }
     }
   };
 
