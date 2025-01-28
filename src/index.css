@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.app-container {
+  height: 100vh;
+  width: 100vh;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background: rgb(246, 145, 142);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 145, 142, 1) 20%,
+    rgba(69, 23, 23, 1) 90%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tic-tac-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.tic-tac-box {
+  cursor: pointer;
+}
+
+
+.tic-tac-toe {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.board {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 90px;
+  height: 90px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
