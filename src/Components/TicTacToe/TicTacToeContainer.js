@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Button from '@mui/material/Button';
 
-export const TicTacToeContainer = ({ size = 3 }) => {
+
+export const TicTacToeContainer = ({ size }) => {
   const [board, setBoard] = useState(
     Array.from({ length: size }, () => Array(size).fill(null))
   );
@@ -79,9 +81,11 @@ export const TicTacToeContainer = ({ size = 3 }) => {
           </div>
         ))}
       </div>
-      <button className="reset-button" onClick={resetGame}>
-        Reset Game
-      </button>
+      <div className="center">
+        <Button className="reset-button" variant="contained" color="primary" onClick={resetGame}>
+          Reset Game
+        </Button>
+      </div>
     </div>
   );
 };
