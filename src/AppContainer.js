@@ -1,10 +1,11 @@
-import { ThemeProvider, THEME_ID, createTheme } from "@mui/material/styles";
+import React from 'react';
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 
 const materialTheme = createTheme();
 
 const AppContainer = ({ children }) => {
   return (
-    <ThemeProvider theme={{ [THEME_ID]: materialTheme }}>
+    <ThemeProvider theme={materialTheme}>
       <div className="container">
         {children}
       </div>
